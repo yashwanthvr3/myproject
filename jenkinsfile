@@ -16,7 +16,7 @@ pipeline {
                echo 'deploying hello world in staging area'
           }
       } 
-      stage(deploy-production)
+      stage(deploy-production) {
          steps {
              echo ' hello world '
           }
