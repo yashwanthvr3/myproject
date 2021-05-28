@@ -3,7 +3,7 @@ pipeline {
        stages {
             stage("test"){
                 steps {
-                   git branch: master , credentialsId: 'yashwanthvr3', url: 'https:https://github.com/yashwanthvr3/myproject.git'
+                   git branch: master , credentialsId: 'yashwanthvr3', url: 'https://github.com/yashwanthvr3/myproject.git'
                 }
             }  
             stage("build"){               
