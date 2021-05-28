@@ -1,17 +1,17 @@
 pipeline {
-       agents any
+       agent any
        stages {
-        stage("code check"){
-           step {
+          stage("code check"){
+             step {
                git credentialsId: 'yashwanthvr3', url: 'https:https://github.com/yashwanthvr3/myproject.git'
             }
           }  
-        stage("build"){               
+          stage("build"){               
             step {      
                sh 'docker build -t  new1 ./primenumber-new/.'
             }
           }  
-        stage("deployment"){  
+          stage("deployment"){  
             step {  
                sh 'docker run -d -p 6000:5000 --name Groundit1 new1'
             }
