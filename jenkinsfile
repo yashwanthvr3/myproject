@@ -6,20 +6,20 @@ pipeline {
                 echo 'testing Hello World'
             }
         }
-        stage(build) { 
+        stage('build') { 
              steps{ 
                  echo 'building hello world'
            }
        }
-       stage(deploy-staging) {
+       stage('deploy-staging') {
            steps {
                echo 'deploying hello world in staging area'
-          }
-      } 
-      stage(deploy-production) {
+           }
+       } 
+      stage('deploy-production') {
          steps {
              echo ' hello world '
-          }
+           }
        }   
    }
 }
