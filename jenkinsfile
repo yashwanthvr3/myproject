@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('test') {
             steps {
-                echo 'Hello World'
+                echo 'testing Hello World'
             }
         }
         stage(build) { 
@@ -11,10 +11,15 @@ pipeline {
                  echo 'building hello world'
            }
        }
-       stage(deploy) {
+       stage(deploy-staging) {
            steps {
-               echo 'deploying hello world'
+               echo 'deploying hello world in staging area'
           }
-      }      
+      } 
+      stage(deploy-production)
+         steps {
+             echo ' hello world '
+          }
+       }   
    }
 }
